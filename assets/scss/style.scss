@@ -116,7 +116,21 @@
   padding-top: 1vh;
   width: 35vw;
   @include breakpoint(mobile) { 
-  	display: none;
+    display: none;
+  }
+}
+.go-header-search-mobile {
+    padding-top: 0.5vh;
+    width: 100%;
+  @include breakpoint(tablet) { 
+  }
+}
+.go-header-search-mobile-container {
+    display: none;
+  @include breakpoint(mobile) {
+    display: inherit;
+    padding-top: 2vh;
+    padding-bottom: 1vh;
   }
 }
 .search-container {
@@ -128,6 +142,9 @@
 
 .search-results-section {
   padding-top: 4vh;
+  @include breakpoint(mobile) {
+    padding-top: 1vh;
+  }
 }
 
 .search-section {
