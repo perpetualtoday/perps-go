@@ -21,9 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function scrollFunction() {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
     document.getElementById("navbar").style.top = "0";
+    if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+                el.classList.remove('is-active');
+        });
+    };
+    document.getElementById("appMenuHeader").classList.remove("m-fadeIn");
   } else {
     document.getElementById("navbar").style.top = "-100px";
+    if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+                el.classList.remove('is-active');
+        });
+    };
+    document.getElementById("appMenu").classList.remove("m-fadeIn");
   }
 }
