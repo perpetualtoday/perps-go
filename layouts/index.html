@@ -101,5 +101,14 @@ i.src = "https://cdn.curator.io/published/0d682981-dd0f-4dc0-b424-6f74b6811fec.j
 e = d.getElementsByTagName(s)[0];
 e.parentNode.insertBefore(i, e);
 })();
+! function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (!d.getElementById(id)) {
+js = d.createElement(s);
+js.id = id;
+js.src = 'https://weatherwidget.io/js/widget.min.js';
+fjs.parentNode.insertBefore(js, fjs);
+}
+}(document, 'script', 'weatherwidget-io-js');
 </script>
 {{ end }}

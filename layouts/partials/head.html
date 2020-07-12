@@ -26,8 +26,6 @@
   <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
   <meta name="theme-color" content="#273c75">
 
-  <script src="/plugins/lazyload/lazyload.min.js"></script>
-
   <meta name="keywords" content="{{if .IsPage}}{{ range $i, $e := .Params.tags }}{{ if $i }}, {{ end }}{{ $e }}{{ end }}{{else}}{{.Site.Params.keywords}}{{end}}">
 
 

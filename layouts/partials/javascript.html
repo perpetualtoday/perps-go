@@ -1,11 +1,13 @@
-{{ $script := resources.Get "js/script.js" | minify}}
-<script src="{{ $script.Permalink }}"></script>
-
 <script type="text/javascript" id="cookiebanner"
     src="https://cdn.jsdelivr.net/gh/dobarkod/cookie-banner@1.2.2/dist/cookiebanner.min.js"
     data-height="30px" data-position="top" data-moreinfo="/cookies"
     data-message="We use cookies to improve your browsing experience.">
 </script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-156100338-2"></script>
+
+{{ $script := resources.Get "js/script.js" | minify}}
+<script src="{{ $script.Permalink }}"></script>
 
 <script>
 	if ('serviceWorker' in navigator) {
