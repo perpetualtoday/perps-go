@@ -22,6 +22,22 @@ $break-1824: 114em;
         @media (min-width: $break-768) { @content; }
     }
 
+    // Phablets (portrait)
+    @else if $point == phabletPortrait {
+        @media only screen
+        and (min-device-width : $break-600)
+        and (max-device-width : $break-768)
+        and (orientation : portrait) { @content; }
+    }
+
+    // Phablets (landscape)
+    @else if $point == phabletLandscape {
+        @media only screen
+        and (min-device-width : $break-600)
+        and (max-device-width : $break-768)
+        and (orientation : landscape) { @content; }
+    }
+
     @else if $point == desktop {
         @media (min-width: $break-1280) { @content; }
     }
@@ -63,9 +79,20 @@ $break-1824: 114em;
     // iPads (portrait)
     @else if $point == ipadPortrait {
         @media only screen
-        and (min-device-width : $break-768)
-        and (max-device-width : $break-1024)
-        and (orientation : portrait) { @content; }
+          and (min-device-width: 768px) 
+          and (max-device-width: 1024px) 
+          and (orientation: portrait) 
+          and (-webkit-min-device-pixel-ratio: 2) { @content; }
+    }
+
+    // iPad Pro (portrait)
+    @else if $point == ipadProPortrait {
+        @media only screen 
+          and (min-device-width: 1024px) 
+          and (min-device-height: 1366px)
+          and (max-device-width: 1024px) 
+          and (max-device-height: 1366px)
+          and (orientation: portrait) { @content; }
     }
 
     // Desktops and laptops
