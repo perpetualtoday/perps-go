@@ -97,8 +97,24 @@
   	width: 84vw;
   }
   @include breakpoint(tablet) { 
-  	width: 48vw;
-  	margin-right: 2vw;
+    width: 48vw;
+    margin-right: 2vw;
+  }
+  @include breakpoint(phabletPortrait) { 
+    width: 56vw;
+    margin-right: 2vw;
+  }
+  @include breakpoint(phabletLandscape) { 
+    width: 46vw;
+    margin-right: 2vw;
+  }
+  @include breakpoint(ipadPortrait) { 
+    width: 42vw;
+    margin-right: 2vw;
+  }
+  @include breakpoint(ipadProPortrait) { 
+    width: 36vw;
+    margin-right: 2vw;
   }
   @include breakpoint(desktop) { 
   	width: 24vw;
@@ -262,6 +278,39 @@
   text-align: center;
   background-color: rgba(255, 255, 255, 1.0);
   color: rgba(0, 0, 0, 0.5);
+}
+
+.cookiebanner {
+  display: flex;
+  height: 6vh;
+  @include breakpoint(mobile) { 
+    height: 8vh;  
+  }
+  @include breakpoint(tablet) { 
+    height: 7vh;  
+  }
+}
+.cookiebanner br { 
+  display: none;
+  @include breakpoint(mobile) { 
+    display: inherit;  
+  }
+  @include breakpoint(tablet) { 
+    display: inherit;  
+  }
+  @include breakpoint(ipadPortrait) { 
+    display: none;  
+  }
+  @include breakpoint(ipadProPortrait) { 
+    display: none;  
+  }
+}
+.cookiebanner span {
+  text-align: center;
+  margin: auto;
+}
+.cookiebanner-close {
+  margin: auto 0;
 }
 
 .no-link {
