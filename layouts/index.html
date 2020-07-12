@@ -1,0 +1,105 @@
+{{ define "main" }}
+<section class="hero go-main-panel is-primary is-fullheight">
+	<div class="hero-head go-header">
+		<header class="navbar is-transparent">
+			<div class="container">
+				<div class="navbar-brand">
+					<div class="navbar-weather">
+						<a href="https://www.weatherwx.com/forecasts/ph/manila.html" target="_blank"><img style="width: 160px;" src="https://www.weatherwx.com/forecast.php?forecast=hourly&pands=manila,,ph&config=png&alt=hwitransparentwwwmet&hwvbg=transparent" alt="Click for the latest Manila weather forecast."></a>
+					</div>
+					<span class="navbar-burger-text is-vcentered" id="appMenuCaption">
+						More Links
+					</span>
+					<span class="navbar-burger burger" data-target="appMenuHeader" data-caption="appMenuCaption">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</div>
+				<div id="appMenuHeader" class="m-fadeOut go-sites-menu card">
+					{{ partial "components/appmenu.html" . }}
+				</div>
+			</div>
+		</header>
+	</div>
+	<div class="hero-body search-section">
+		<div class="container search-container">
+			<img src="{{.Site.Params.brand.logo | absURL }}" alt="{{.Site.Title}}" onmousedown="return false;" class="search-logo is-flex is-horizontal-center">
+			<div class="control has-icons-left my-6">
+				<form method="get" action="/search">
+					<input class="input is-medium is-rounded is-primary" type="text" name="gp-search" placeholder="Search on Google">
+					<span class="icon is-small is-left">
+						<i class="fas fa-search"></i>
+					</span>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="hero-body shortcuts-section">
+		<div class="container shortcuts-container">
+			<div class="card go-shortcuts-card">
+				<div class="card-content">
+					<div class="columns is-centered is-multiline is-mobile">
+						<div class="column is-narrow shortcut-container">
+							<a href="http://uphg.dyndns.org">
+								<button class="button shortcut-button shortcut-moodle is-large is-rounded">
+								<img src="/assets/icons/ic-shortcut-moodle.svg" onmousedown="return false;" class="shortcut-logo is-horizontal-center">
+								</button>
+							</a>
+							<h4 class="subtitle shortcut-text has-text-centered is-6">Moodle</h4>
+						</div>
+						<div class="column is-narrow shortcut-container">
+							<a href="//meet.google.com">
+								<button class="button shortcut-button shortcut-meet is-large is-rounded">
+								<img src="/assets/icons/ic-shortcut-meet.svg" onmousedown="return false;" class="shortcut-logo is-horizontal-center">
+								</button>
+							</a>
+							<h4 class="subtitle shortcut-text has-text-centered is-6">Meet</h4>
+						</div>
+						<div class="column is-narrow shortcut-container">
+							<a href="//search.ebscohost.com">
+								<button class="button shortcut-button shortcut-ebsco is-large is-rounded">
+								<img src="/assets/icons/ic-shortcut-ebsco.png" onmousedown="return false;" class="shortcut-logo is-horizontal-center">
+								</button>
+							</a>
+							<h4 class="subtitle shortcut-text has-text-centered is-6">EBSCOhost</h4>
+						</div>
+						<div class="column is-narrow shortcut-container">
+							<a href="http://gti-gma.dyndns.org:8339/PARENTS_STUDENTS/parents_student_index.htm">
+								<button class="button shortcut-button shortcut-grades is-large is-rounded">
+								<img src="/assets/icons/ic-shortcut-grades.png" onmousedown="return false;" class="shortcut-logo is-horizontal-center">
+								</button>
+							</a>
+							<h4 class="subtitle shortcut-text has-text-centered is-6">Grades</h4>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hero-foot">
+		<nav class="tabs is-boxed is-fullwidth is-large">
+			<div class="container">
+				<ul>
+					<li class="is-active go-loop-title"><a class="no-link">Perps Loop</a></li>
+				</ul>
+				<span class="go-loop-subtitle">Powered by Curator.io</span>
+			</div>
+		</nav>
+	</div>
+</section>
+<section class="section">
+	<div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+</section>
+<script>
+(function() {
+var i, e, d = document,
+s = "script";
+i = d.createElement("script");
+i.async = 1;
+i.src = "https://cdn.curator.io/published/0d682981-dd0f-4dc0-b424-6f74b6811fec.js";
+e = d.getElementsByTagName(s)[0];
+e.parentNode.insertBefore(i, e);
+})();
+</script>
+{{ end }}

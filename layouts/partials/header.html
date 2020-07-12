@@ -1,0 +1,25 @@
+<nav class="navbar is-transparent" id="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="{{.Site.Params.brand.navbar | absURL }}" class="navbar-logo">
+    </a>
+    <div class="go-header-search">
+      <div class="control has-icons-left ml-4">
+        <form method="get" action="/search">
+          <input class="input is-rounded is-primary go-header-search" type="text" name="gp-search" placeholder="Search on Google">
+          <span class="icon is-small is-left">
+            <i class="fas fa-search"></i>
+          </span>
+        </form>
+      </div>
+    </div>
+    <span class="navbar-burger navbar-burger-header has-text-dark burger" data-target="appMenu" data-caption="appMenuCaption">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+  </div>
+  <div id="appMenu" class="m-fadeOut go-sites-menu card">
+    {{ partial "components/appmenu.html" . }}
+  </div>
+</nav>

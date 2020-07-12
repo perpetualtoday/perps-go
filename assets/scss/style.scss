@@ -1,0 +1,268 @@
+/*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
+@import "variables";
+@import "bulma";
+@import "breakpoints";
+@import "overrides";
+
+.go-main-panel {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url(https://bing.biturl.top/?resolution=1920&format=image&index=0&mkt=en-NZ),
+    linear-gradient(#273c75, #273c75);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.go-shortcuts-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 8px;
+}
+.go-header {
+  padding-top: 4vh;
+  @include breakpoint(mobile) { 
+  	padding: 0 8vw;
+  	padding-top: 4vh;
+  }
+  @include breakpoint(tablet) { 
+  	padding: 0 8vw;
+  	padding-top: 4vh;
+  }
+}
+#navbar {
+  top: -100px;
+  width: 100%;
+  padding: 3vh 8vw 0 8vw;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 1.0);
+  position: fixed;
+  transition: top 0.3s;
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.4);
+}
+.search-results-navbar {
+  width: 100%;
+  padding: 3vh 8vw 0 8vw;
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 1.0);
+}
+.navbar-logo {
+  height: 100px;
+  width: auto;
+}
+.go-applist-pad {
+  padding-top: 4vh;
+}
+.navbar-burger-text {
+	color: #c9c8b8;
+    text-align: right;
+    display: block;
+    height: 3.25rem;
+    position: relative;
+    width: 6.25rem;
+    margin-left: auto;
+    margin-top: 11px;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  @include breakpoint(mobile) { 
+  	display: none;
+  }
+}
+.navbar-burger {
+    margin-left: 10px;
+  @include breakpoint(mobile) { 
+  	margin-left: auto;
+  }
+}
+.navbar-burger-header {
+  	margin-left: auto;
+}
+
+.navbar-weather {
+  margin-top: 8px;
+}
+
+.go-sites-menu {
+  z-index: 2;
+  float: right;
+}
+.go-sites-menu-container {
+  padding: 4vh 0;
+  @include breakpoint(mobile) { 
+  	width: 84vw;
+  }
+  @include breakpoint(tablet) { 
+  	width: 48vw;
+  	margin-right: 2vw;
+  }
+  @include breakpoint(desktop) { 
+  	width: 24vw;
+  }
+}
+.go-sites-menu-button {
+  height: 48px;
+}
+.go-sites-menu-icon {
+  height: auto;
+  width: 24px;
+}
+
+.go-header-search {
+  padding-top: 1vh;
+  width: 35vw;
+  @include breakpoint(mobile) { 
+  	display: none;
+  }
+}
+.search-container {
+  padding: 0 22vw;
+  @include breakpoint(mobile) { 
+  	padding: 0 8vw;
+  }
+}
+
+.search-results-section {
+  padding-top: 4vh;
+}
+
+.search-section {
+  padding-top: 3vh;
+  padding-bottom: 0;
+}
+.search-logo {
+  height: auto;
+  width: 17rem;
+  margin-top: 0;
+  margin-bottom: 12vh;
+  user-drag: none; 
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  @include breakpoint(mobile) { 
+  	width: 14rem;
+  }
+}
+
+.quick-link-title {
+  padding: 2vh 0;
+  font-weight: 300;
+}
+.shortcuts-section {
+  padding-top: 0;
+}
+.shortcuts-container {
+  padding: 0 22vw;
+  padding-bottom: 12vh;
+  @include breakpoint(mobile) { 
+  	padding: 0 8vw;
+  }
+}
+
+.shortcut-container {
+  padding: 8px 20px;
+}
+.shortcut-button {
+  height: 64px;
+}
+.shortcut-text {
+  padding-top: 0.75rem;
+  font-weight: 600;
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+.shortcut-logo {
+  height: auto;
+  width: 36px;
+}
+
+.shortcut-moodle {
+  background-color: rgba(249, 128, 18, 1.0);
+  border-color: rgba(249, 128, 18, 1.0);
+}
+.shortcut-meet {
+  background-color: rgba(8, 80, 73, 1.0);
+  border-color: rgba(8, 80, 73, 1.0);
+}
+.shortcut-ebsco {
+  background-color: rgba(255, 255, 255, 1.0);
+}
+.shortcut-grades {
+  background-color: rgba(252, 67, 95, 1.0);
+  border-color: rgba(252, 67, 95, 1.0);
+}
+
+.shortcut-chat {
+  background-color: rgba(8, 80, 73, 1.0);
+  border-color: rgba(8, 80, 73, 1.0);
+}
+.shortcut-gmail {
+  background-color: rgba(211, 46, 42, 1.0);
+  border-color: rgba(211, 46, 42, 1.0);
+}
+.shortcut-drive {
+  background-color: rgba(7, 132, 82, 1.0);
+  border-color: rgba(7, 132, 82, 1.0);
+}
+.shortcut-docs {
+  background-color: rgba(55, 107, 213, 1.0);
+  border-color: rgba(55, 107, 213, 1.0);
+}
+.shortcut-slides {
+  background-color: rgba(253, 159, 0, 1.0);
+  border-color: rgba(253, 159, 0, 1.0);
+}
+
+.shortcut-bed {
+  background-color: rgba(220, 182, 2, 1.0);
+  border-color: rgba(220, 182, 2, 1.0);
+}
+.shortcut-uphs {
+  background-color: rgba(36, 58, 107, 1.0);
+  border-color: rgba(36, 58, 107, 1.0);
+}
+
+.go-loop-title {
+  font-weight: 600;
+}
+.go-loop-subtitle {
+  display: block;
+  margin-top: -8px;
+  padding-bottom: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 1.0);
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.no-link {
+  cursor: default;
+}
+.is-horizontal-center {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.m-fadeOut {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+}
+.m-fadeIn {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s linear 0s, opacity 300ms;
+}

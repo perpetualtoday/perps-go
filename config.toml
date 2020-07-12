@@ -1,0 +1,9 @@
+baseURL = "https://go.prptd.cf/"
+languageCode = "en-us"
+title = "Perps Go! | Brought to you by Perpetual Today"
+
+[params.brand]
+logo = "/assets/logo.svg"
+color = "/assets/logo-color.svg"
+navbar = "/assets/navbar-logo.svg"
+copyright = "2020 Perpetual Today and the [University of Perpetual Help-GMA Campus](https://gma.uphsl.edu.ph)."
