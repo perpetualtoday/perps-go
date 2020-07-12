@@ -44,7 +44,8 @@
 	    }
 	}
     var searchStr = queryString("gp-search");
-    document.getElementById('gp-search').value = searchStr;
+    var searchInp = searchStr.replace(/\+/g,' ');
+    document.getElementById('gp-search').value = searchInp;
 </script>
 <script async src="https://cse.google.com/cse.js?cx=001897873025161475197:apz4eywrqv0"></script>
 {{ end }}
