@@ -5,15 +5,20 @@
       <img src="{{.Site.Params.brand.navbar | absURL }}" class="navbar-logo">
     </a>
     <div class="go-header-search">
-      <div class="control has-icons-left ml-4">
-        <form method="get" action="/search">
-          <input class="input is-rounded is-primary go-header-search" type="text" name="gp-search" id="gp-search" placeholder="Search on Google">
-          <span class="icon is-small is-left">
-            <i class="fas fa-search"></i>
-          </span>
+      <form id="go-search-header" method="get" action="/search">
+        <div class="field has-addons ml-4">
+          <div class="control has-icons-right is-expanded">
+            <input type="text" name="gp-search" id="gp-search" class="input is-primary is-rounded" placeholder="Search on Google">
+          </div>
+          <p class="control">
+            <a href="#" onclick="document.getElementById('go-search-header').submit()" class="button is-rounded is-primary">
+              <span class="icon is-small is-right">
+                <i class="fas fa-search"></i>
+              </span></a>
+            </p>
+          </div>
         </form>
       </div>
-    </div>
     <span class="navbar-burger navbar-burger-header has-text-dark burger" data-target="appMenuHeader" data-caption="appMenuCaption">
       <span></span>
       <span></span>
